@@ -1,5 +1,13 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import React from 'react'
+import './globals.css'
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
+  themeColor: '#000000'
+}
 
 export const metadata: Metadata = {
   title: 'Mon Application PWA',
@@ -7,12 +15,6 @@ export const metadata: Metadata = {
   manifest: '/manifest.json',
   icons: {
     apple: '/icons/icon-192x192.png',
-  },
-  themeColor: '#000000',
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    viewportFit: 'cover',
   },
   other: {
     'apple-mobile-web-app-capable': 'yes',
